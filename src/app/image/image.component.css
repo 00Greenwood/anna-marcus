@@ -1,0 +1,21 @@
+#image {
+  position:relative;
+  min-height: 100px;
+}
+
+/* Style the button and place it in the middle of the container/image */
+#button-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

@@ -1,0 +1,9 @@
+<div id='password-form'>
+  <label for='password'>The date of the {{event}}:</label>
+  <div class='input-group'>
+    <input id='password' type='date' class='form-control' [formControl]='date'>
+    <button class='btn btn-success ml-2' *ngIf='isAllowed' (click)='onSubmitClick()'>Submit</button>
+    <button class='btn btn-danger ml-2' *ngIf='isDenied' (click)='onSubmitClick()'>Submit</button>
+    <button class='btn btn-secondary ml-2' *ngIf='isUnknown' (click)='onSubmitClick()'>Submit</button>
+    <div>
+    </div>

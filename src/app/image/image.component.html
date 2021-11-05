@@ -1,0 +1,12 @@
+<div id='image' class='text-center' (mouseenter)='onMouseEnter()' (mouseleave)='onMouseLeave()'>
+  <img (load)='this.loaded = true' [ngStyle]="{'opacity' : (this.hoveredOver || this.inPreview) ? 0.3 : 1.0}" src={{path}} class='img-fluid rounded' alt={{image.id}} loading='lazy'>
+  <div id='loading-spinner' *ngIf='!this.loaded'>
+    <div class='spinner-border text-secondary' style='width: 5rem; height: 5rem;'></div>
+  </div>
+  <div id='button-wrapper' *ngIf='this.hoveredOver && !this.inPreview'>
+    <a class='btn btn-secondary w-100 m-1' href='../../assets/images/{{image.id}}.jpg' download={{image.id}}>Download</a>
+    <!-- <button class='btn btn-secondary w-100 m-1' (click)='onSelectClick()'>Select</button> -->
+    <br>
+    <a class='btn btn-secondary w-100 m-1' [routerLink]="['.']" [queryParams]='{view: image.id}'>View</a>
+  </div>
+</div>
